@@ -1,0 +1,28 @@
+com.example.userauthentication (Root Package):
+
+UserAuthenticationApplication.java: The main Spring Boot application class.
+com.example.userauthentication.model:
+
+User.java: Represents the user entity with fields like id, username, password, and roles.
+Role.java: Represents the role entity, with fields like id and name (e.g., "ROLE_USER," "ROLE_ADMIN").
+ERole.java: An enumeration defining the possible user roles.
+com.example.userauthentication.repository:
+
+UserRepository.java: A Spring Data JPA repository for managing User entities.
+RoleRepository.java: A Spring Data JPA repository for managing Role entities.
+com.example.userauthentication.security:
+
+WebSecurityConfig.java: Configures Spring Security, including authentication, authorization, and JWT filters.
+com.example.userauthentication.security.jwt:
+
+JwtUtils.java: Handles JWT token generation and validation.
+AuthTokenFilter.java: A Spring Security filter that intercepts requests, validates JWT tokens, and sets the authentication context.
+AuthEntryPointJwt.java: handles the unauthorized requests.
+com.example.userauthentication.security.services:
+
+UserDetailsImpl.java: Implements Spring Security's UserDetails interface, providing user details for authentication.
+UserDetailsServiceImpl.java: Implements Spring Security's UserDetailsService interface, loading user details from the database.
+com.example.userauthentication.controller:
+
+AuthController.java: Handles user registration and login requests.
+(Optional) TestController.java: A controller for testing protected endpoints.
