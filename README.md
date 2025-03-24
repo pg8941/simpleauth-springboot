@@ -100,7 +100,6 @@ Securing USB device management applications.
 Controlling access to diagnostic tools and logs.
 Managing user permissions for firmware updates.
 Authenticating users for data analysis and reporting tools.
-13. Daily Life Use (Samsung USB Framework Team):
 
 **13. Current uses**
 
