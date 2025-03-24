@@ -197,3 +197,84 @@ The UserController delegates the registration logic to the UserService.
 The UserService uses the UserRepository to save the user data to the database.
 The database confirms the successful insertion.
 The user object is returned, and then a 200 ok response is sent to the client.
+
+
+*******************************************************************************************************************************************************************
+
+**Testing**
+
+**1. Results:**
+
+Successful Implementation of Core Features:
+The service successfully implements user registration, login, user retrieval, and role-based access control.
+Admin users can effectively manage user roles.
+Improved Security:
+Password hashing using BCryptPasswordEncoder ensures secure storage of user credentials.
+Role-based access control restricts access to protected endpoints, minimizing security risks.
+Robust and Scalable Architecture:
+Spring Boot's architecture enables easy scaling and maintenance.
+The service is designed to handle a growing number of users and applications.
+Simplified Integration:
+The RESTful API design allows for easy integration with various client applications.
+The service is able to return JSON responses that are easy to use.
+Positive Testing Outcomes:
+All test cases passed, validating the service's functionality and reliability.
+
+**2. Testing Postman:**
+
+Unit Testing (If Applicable):
+While this project primarily focuses on API testing, unit tests can be written for service classes and other components.
+For example, testing the UserService methods to ensure they correctly interact with the UserRepository.
+
+**API Testing (Postman):**
+
+**Login Endpoint (/login):**
+Tested with valid and invalid credentials.
+Verified successful login and 401 Unauthorized responses.
+**Admin Dashboard Endpoint (/admin/dashboard):**
+Tested with admin user credentials, regular user credentials, and no credentials.
+Verified 200 OK for admin users and 403 Forbidden/401 Unauthorized for others.
+**User Registration Endpoint (/register):**
+Tested with valid registration data and duplicate usernames.
+Verified successful registration and 400 Bad Request responses.
+**Get User by Username Endpoint (/users/{username}):**
+Tested with valid, and invalid usernames.
+Verified 200 ok for valid usernames, and 404 not found for invalid usernames.
+**Update User Roles Endpoint (/users/{username}/roles):**
+Tested with valid admin credentials, valid usernames, and valid role updates.
+Tested with invalid admin credentials, and invalid usernames.
+Verified 200 ok for valid requests, and 403 forbidden or 404 not found for invalid requests.
+**Database Verification:**
+Verified that user and role data is correctly stored in the MySQL database.
+Checked the users, roles, and user_roles tables for data integrity.
+**Security Testing:**
+Ensured that protected endpoints are only accessible to authorized users.
+Verified that password hashing is correctly implemented.
+Tested that the authorization headers are correctly used.
+**Error Handling:**
+Tested error scenarios (e.g., invalid usernames, duplicate registrations) and verified that the service returns appropriate error responses.
+**Logging:**
+Verified that the logs contain proper information, and that they can be used to debug any issues.
+**Example Test Case (Postman):**
+
+Test Case: Successful User Login
+
+Endpoint: POST /login
+
+**Request Body:**
+
+JSON
+
+{
+    "username": "regularuser",
+    "password": "userpassword"
+}
+**Expected Response:**
+
+Status: 200 OK
+Body: Login successful
+Actual Response:
+
+Status: 200 OK
+Body: Login successful
+Result: Pass
