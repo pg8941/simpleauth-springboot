@@ -13,6 +13,7 @@ Role-Based Access Control (RBAC): Many USB framework applications require fine-g
 Security: Addresses vulnerabilities associated with ad-hoc authentication implementations.
 Scalability: Spring Boot's architecture allows for easy scaling as the number of users and applications grows.
 Integration: Simplifies integration with other systems and services.
+
 **3. What It Does:**
 
 User Registration: Allows new users to create accounts.
@@ -20,6 +21,7 @@ User Login: Authenticates users and provides secure access.
 Role Management: Enables admin users to assign and update user roles.
 Role-Based Access Control: Protects endpoints based on user roles (e.g., admin dashboard).
 User Retrieval: allows a user to be retrieved by username.
+
 **4. Tech Stack:**
 
 Spring Boot: Framework for building RESTful APIs.
@@ -30,6 +32,7 @@ JPA/Hibernate: Object-relational mapping.
 Postman: API testing tool.
 Git/GitHub: Version control and collaboration.
 BCryptPasswordEncoder: Secure password hashing.
+
 **5. Results:**
 
 Successfully implemented secure user registration and login.
@@ -37,12 +40,14 @@ Established role-based access control for protected endpoints.
 Created a scalable and maintainable authentication service.
 Improved security of the system.
 Simplified user management.
+
 **6. Tools:**
 
 Eclipse (IDE).
 MySQL Workbench or command-line client.
 Postman.
 Git.
+
 **7. Technologies:**
 
 RESTful API design.
@@ -50,6 +55,7 @@ JSON data format.
 HTTP protocol.
 Spring Security.
 JPA/Hibernate.
+
 **8. Challenges:**
 
 Designing a robust and secure role-based access control system.
@@ -57,6 +63,7 @@ Handling database interactions and ensuring data integrity.
 Integrating Spring Security with Spring Boot.
 Ensuring proper authentication and authorization.
 Debugging security related issues.
+
 **9. Future Scope:**
 
 Implement OAuth 2.0 for third-party authentication.
@@ -66,6 +73,7 @@ Implement password reset functionality.
 Add more detailed logging.
 Add endpoint for user deletion.
 Add endpoint for changing user password.
+
 **10. What's New From Present:**
 
 Centralized and standardized authentication.
@@ -73,6 +81,7 @@ Fine-grained role-based access control.
 Improved security and maintainability.
 Scalability for future growth.
 Simplified integration with other services.
+
 **11. Input and Output:**
 
 Input:
@@ -84,6 +93,7 @@ Output:
 Authentication tokens (or session IDs).
 User details (JSON).
 Success/error messages (JSON).
+
 **12. Use Cases:**
 
 Securing USB device management applications.
@@ -93,11 +103,14 @@ Authenticating users for data analysis and reporting tools.
 13. Daily Life Use (Samsung USB Framework Team):
 
 **13. Current uses**
+
 Simplifies authentication for new USB framework applications.
 Provides a secure and consistent way to manage user permissions.
 Reduces the time and effort required to implement authentication.
 Allows you to easily test security related features of the USB framework applications.
+
 **14. For Users:**
+
 Provides a secure and reliable login experience.
 Ensures that users only have access to authorized features.
 Protects sensitive data and operations.
@@ -116,6 +129,7 @@ Spring Boot Authentication Service: The core application that handles authentica
 MySQL Database: Stores user data, roles, and user-role relationships.
 Spring Security: Manages authentication and authorization logic.
 JSON: The data format used for communication between the client and the service.
+
 **16 . Project Structure:**
 
 simpleauth/
@@ -158,8 +172,8 @@ security/: Contains Spring Security configuration (WebSecurityConfig.java).
 service/: Contains service classes (UserService.java) for business logic.
 application.properties or application.yml: Configuration files for Spring Boot.
 pom.xml (Maven) or build.gradle (Gradle): Build configuration files.
-17. Data Flow Diagram (Example: User Registration):
 
+**18. Data Flow Diagram (Example: User Registration):**
 
 sequenceDiagram
     participant Client
